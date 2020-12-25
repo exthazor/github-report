@@ -1,0 +1,20 @@
+import { StringNullableChain } from "lodash";
+
+import { Repo } from "./Repo";
+
+export class User{
+    
+    login: String
+    fullName: String
+    repoCount: String
+    followerCount: String
+    repos?: Repo[]
+
+    constructor(userResponse: any){
+        this.login = userResponse.login
+        this.fullName = userResponse.name
+        this.repoCount = userResponse.public_repos
+        this.followerCount = userResponse.followers
+        this.repos = userResponse.login
+    }
+}
